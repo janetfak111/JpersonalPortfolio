@@ -5,6 +5,8 @@ import { ProjectCard } from "./ProjectCard";
 
 import colorSharp2 from "../assets/color-sharp2.png";
 import todolist from "../assets/Todo-List.jpeg";
+import personalPortfolio from "../assets/personalPortfolio.jpeg";
+import Expensetracker from "../assets/Expense-tracker.jpeg";
 import projImg2 from "../assets/project-img2.png";
 import projImg3 from "../assets/project-img3.png";
 import 'animate.css';
@@ -15,20 +17,22 @@ export const Projects = () => {
 
     const projects = [
         {
-            title: "Business Startup",
+             title: "Todo List",
             description: "Design & Development",
-            imgUrl: projImg3,
-            
+            imgUrl: todolist,
+            githubLink: "https://janetfak111.github.io/Todo-List",
         },
         {
-            title: "Business Startup",
+            title: "Personal Portfolio",
             description: "Design & Development",
-            imgUrl: projImg2,
+            imgUrl: personalPortfolio,
+            githubLink: "https://janetfak111.github.io/JpersonalPortfolio",
         },
         {
-            title: "Business Startup",
+            title: "Expense Tracker",
             description: "Design & Development",
-            imgUrl: projImg3,
+            imgUrl: Expensetracker,
+            githubLink: "https://janetfak111.github.io/expense-tracker",
         },
         {
             title: "Business Startup",
