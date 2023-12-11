@@ -29,15 +29,16 @@ export const Skills = () => {
 
     return (
         <section className="skill" id="skills">
-            <Container>
-                <Row>
-                    <Col>
-                    <div className="skills-bx">
-                        <h2>
+                    <div className="container">
+                        <div className="row">
+                        <div className="col-12">
+                            <div className="skill-bx wow zoomIn">
+                          <h2>
                             Skills
                         </h2>
                         <p>I am currently deeply engaged in the dynamic world of React development.<br></br>With a strong foundation in HTML and CSS. </p>
-                        <Carousel responsive={responsive} infinite={true} className='skill-slider'>
+                        <Carousel
+                         responsive={responsive} infinite={true} className='owl-carousel owl-theme skill-slider'>
                             <div className="item">
                                 <img src={meter1} alt="HTML" />
                                     <h5>HTML</h5>
@@ -54,14 +55,13 @@ export const Skills = () => {
                                 <img src={meter1} alt="React" />
                                     <h5>React</h5>
                             </div>
-
-                     </Carousel>
+                    </Carousel>
                     </div>
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
+                    </div>
+                    </div>
             <img className="background-image-left" src={colorSharp} />
         </section>
-    )
+    );
 
-}
+};
