@@ -1,6 +1,4 @@
 import { Col, Container, Tab, Row, Nav } from "react-bootstrap";
-import { BrowserRouter } from "react-router-dom";
-
 import { ProjectCard } from "./ProjectCard";
 
 import colorSharp2 from "../assets/color-sharp2.png";

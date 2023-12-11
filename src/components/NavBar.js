@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/logo.svg';
 import navIcon1 from '../assets/nav-icon1.svg';
 import navIcon2 from '../assets/nav-icon2.svg';
@@ -30,16 +30,18 @@ export const NavBar = () => {
         const onUpdateActiveLink = (value) => {
             setActiveLink(value);
         }
+
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
             <Container>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     <img src={logo} alt="Logo" />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav">
                 <span className="navbar-toggler-icon"></span>
+                </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="ms-auto">
                         <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
                         <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
                         <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
@@ -50,12 +52,13 @@ export const NavBar = () => {
                             <a href="#"><img src={navIcon2} alt="" /></a>
                             <a href="#"><img src={navIcon3} alt="" /></a>
                          </div>
-                         <button className="" onClick={() => console.log('console')}><span>Let's connect
-                            </span></button>
-
-                    </span>
+                         <HashLink to='#connect'>
+                         <button className="vvd"><span>Let's Connect</span></button>
+                        </HashLink>
+                        </span>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+
     )
 }
